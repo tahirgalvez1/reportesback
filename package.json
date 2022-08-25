@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tahirgalvez1/reportesback/issues"
   },
-  "homepage": "https://github.com/tahirgalvez1/reportesback#readme"
+  "homepage": "https://github.com/tahirgalvez1/reportesback#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
