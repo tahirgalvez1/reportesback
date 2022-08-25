@@ -1,17 +1,9 @@
-const http = require('http');
-const express = require('express')
-const app = express()
-const hostname = '127.0.0.1';
-const port = 3000;
+const cool = require('cool-ascii-faces');
+const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 
-app.get('/login', (req, res) => {
-    res.send(true)
-})
-
-app.get('/', (req, res) => {
-    res.send('running')
-})
-
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+express()
+  .get('/', (req, res) => res.send('running'))
+  .get('/cool', (req, res) => res.send(cool()))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
